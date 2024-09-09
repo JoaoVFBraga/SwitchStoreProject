@@ -1,0 +1,20 @@
+@import url('main.css');
+
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+  --first-red: rgb(235, 3, 21);
+  --smooth-black: rgb(66, 66, 66);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: rgb(240, 240, 240);
+  font-family: 'SUSE', sans-serif;
+  box-sizing: border-box;
+}
