@@ -6,6 +6,7 @@
   <meta name="description" content="Tudo oque você precisa para o seu console Nintendo Switch você encontra aqui: Jogos, consoles, acessórios e muitos mais.">
   <title>Switch Store</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header>
@@ -24,8 +25,7 @@
             </form>
           </div>
           <div class="login-icon">
-            <img src="img/icons/icons8-login-50.png" alt="" width="30px">
-            <span>Faça seu Login</span>
+            <a href="login.html"><img src="img/icons/icons8-login-50.png" alt="" width="30px"> <span>Faça seu Login</span></a>
           </div>
           <div class="cart">
             <img src="img/icons/icons8-cart-60.png" alt="" width="30px">
@@ -34,10 +34,34 @@
       </div>
     </div>
   </header>
+  <aside class="menu disable">
+    <nav class="menu-nav">
+      <h3>Menu</h3>
+      <ul>
+        <li class="item-menu"><a href="#mais-vendidos"><img src="img/icons/icons8-fire-60.png" width="25px" alt="">Mais Vendidos &#8250</a></li>
+        <li class="item-menu"><a href="#consoles"><img src="img/icons/icons8-nintendo-96.png" width="25px" alt="">Consoles &#8250</a></li>
+        <li class="item-menu"><a href="#jogos"><img src="img/icons/icons8-game-60.png" width="25px" alt="">Jogos &#8250</a></li>
+        <li class="item-menu"><a href="#acessorios"><img src="img/icons/icons8-joy-con-50.png" width="25px" alt="">Acessórios &#8250</a></li>
+      </ul>
+      <a class="login-menu" href="login.html">Acesse sua conta</a>
+      <img class="close-menu" src="img/icons/icons8-close-60.png" width="35px" alt="">
+    </nav>
+  </aside>
+  <aside class="carrinho disable">
+    <nav class="carrinho-nav">
+      <h3>Carrinho</h3>
+      <ul>
+
+      </ul>
+      <p>Valor Total:</p>
+      <a href="login.html" class="finalizar-compra">Finalizar Compra</a>
+    </nav>
+    <img class="close-carrinho" src="img/icons/icons8-close-60.png" width="35px" alt="">
+  </aside>
   <section class="banner">
-    <a href="#"><img src="img/banner/Nintendo-Switch-List-Banner-1.png" alt=""></a>
+    <a href="#jogos"><img src="img/banner/Nintendo-Switch-List-Banner-1.png" alt=""></a>
   </section>
-  <section class="mais-vendidos">
+  <section class="mais-vendidos" id="mais-vendidos">
     <div class="title2">
       <h2><img src="img/pngwing.com.png" alt="" width="80px"> Produtos mais Vendidos <img src="img/pngwing.com.png" alt="" width="80px"></h2>
     </div>
@@ -80,7 +104,7 @@
       </div>
     </section>
   </section>
-  <section class="consoles">
+  <section class="consoles" id="consoles">
     <section class="consoles-container">
       <div class="left-consoles">
         <h2>Consoles</h2>
@@ -131,7 +155,7 @@
       </div>
     </section>
   </section>
-  <section class="jogos">
+  <section class="jogos" id="jogos">
     <section class="jogos-container">
       <div class="title2">
         <h2><img src="img/cogumelov.png" alt="" width="60px"> Jogos <img src="img/cogumelov.png" alt="" width="60px"></h2>
@@ -186,9 +210,9 @@
     </section>
   </section>
   <section class="second-banner">
-    <a href="#"><img src="img/banner/oled-banner.webp" alt=""></a>
+    <a href="#consoles"><img src="img/banner/oled-banner.webp" alt=""></a>
   </section>
-  <section class="acessorios">
+  <section class="acessorios" id="acessorios">
     <section class="acessorios-container">
       <div class="title2">
         <h2><img src="img/cogumelov.png" alt="" width="60px"> Acessórios <img src="img/cogumelov.png" alt="" width="60px"></h2>

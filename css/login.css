@@ -1,0 +1,145 @@
+main {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  justify-content: center;
+  align-items: center;
+}
+.login-header-container{
+  display: flex;
+  max-width: 1440px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0 auto;
+  align-items: center;
+}
+.link-login-header {
+  color: white;
+  font-size: 1.6rem;
+  display: flex;
+  font-weight: 600;
+}
+.login-container {
+  display: flex;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.466);
+  border-radius: 10px;
+  max-width: 800px;
+  background-color: var(--first-red);
+}
+.left-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 50px;
+  justify-content: center;
+}
+.left-login h2{
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.right-login{
+  background-color: white;
+  padding: 30px 50px;
+  border-radius: 0 10px 10px 0;
+}
+.right-login h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+}
+.right-login form{
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.right-login form label{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.right-login form input{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  outline: none;
+  border: 1px solid var(--smooth-black);
+  border-radius: 5px;
+}
+.right-login form .inButton {
+  border: 2px solid var(--first-red);
+  border-radius: 10px;
+  padding: 3px;
+  background-color: var(--first-red);
+  color: white;
+  font-family: 'SUSE';
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.right-login form .inButton:hover {
+  background-color: rgb(255, 104, 104);
+  border: 2px solid rgb(255, 104, 104);
+  transition: 0.3s;
+}
+.criar-conta {
+  text-align: center;
+}
+.criar-conta span {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--first-red);
+}
+.criar-conta span:hover {
+  color: rgb(255, 104, 104);
+  transition: 0.3s;
+}
+
+/* Aviso */
+
+.aviso {
+  display: flex;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
+  width: 600px;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.aviso-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aviso-texto h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.aviso-texto p {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  text-align: center;
+}
+.aviso-texto a {
+  border: 2px solid var(--first-red);
+  border-radius: 10px;
+  padding: 3px;
+  background-color: var(--first-red);
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+.aviso-texto a:hover {
+  background-color: rgb(255, 104, 104);
+  border: 2px solid rgb(255, 104, 104);
+  transition: 0.3s;
+}

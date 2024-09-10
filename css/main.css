@@ -22,6 +22,11 @@ h1{
 .menu-icon{
   display: flex;
   cursor: pointer;
+  transition: 0.3s;
+}
+.menu-icon:hover{
+  transform: rotate(180deg);
+  transition: 0.3s;
 }
 .div-form form input{
   border: none;
@@ -48,6 +53,12 @@ h1{
   gap: 5px;
   font-weight: 700;
   cursor: pointer;
+}
+.login-icon a{
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .cart {
   cursor: pointer;
@@ -128,8 +139,7 @@ h1{
   cursor: pointer;
 }
 .btn-adicionar:hover{
-  background-color: var(--first-red);
-  color: white;
+  background-color: rgb(252, 225, 225);
   transition: 0.3s;
 }
 .btn-comprar{
@@ -143,8 +153,8 @@ h1{
   cursor: pointer;
 }
 .btn-comprar:hover{
-  background-color: white;
-  color: var(--first-red);
+  background-color: rgb(255, 59, 59);
+  border: 2px solid rgb(255, 59, 59);
   transition: 0.3s;
 }
 .produtos-mais-vendidos{
@@ -159,6 +169,7 @@ h1{
 
 .consoles {
   background-color: var(--first-red);
+  padding: 20px 0;
 }
 .consoles-container {
   max-width: 1440px;
@@ -211,8 +222,7 @@ h1{
   cursor: pointer;
 }
 .console-adicionar:hover{
-  background-color: var(--first-red);
-  color: white;
+  background-color: rgb(252, 225, 225);
   transition: 0.3s;
 }
 .console-comprar{
@@ -227,8 +237,8 @@ h1{
   cursor: pointer;
 }
 .console-comprar:hover{
-  background-color: white;
-  color: var(--first-red);
+  background-color: rgb(255, 59, 59);
+  border: 2px solid rgb(255, 59, 59);
   transition: 0.3s;
 }
 
@@ -264,4 +274,120 @@ footer {
 footer a {
   color: white;
   font-weight: 800;
+}
+
+/* Menu */
+
+.menu {
+  background-color: white;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
+  z-index: 99;
+}
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.menu-nav h3 {
+  text-align: center;
+  border-bottom: none;
+  font-size: 1.8rem;
+  color: white;
+  background-color: var(--first-red);
+  border-radius: 10px 10px 0 0;
+}
+.menu-nav ul a {
+  font-size: 1.3rem;
+  display: block;
+  color: var(--smooth-black);
+  font-weight: 600;
+  padding: 10px 50px;
+  display: flex;
+  gap: 5px;
+  transition: 0.4s;
+  position: relative;
+}
+.menu-nav ul li {
+  border-bottom: 1px solid var(--smooth-black);
+}
+.menu-nav ul li a:hover {
+  color: var(--first-red);
+  transform: translateX(10px);
+  transition: 0.4s;
+}
+.menu-nav .login-menu {
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border: 2px solid var(--first-red);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 2px;
+  left: 2px;
+  background-color: var(--first-red);
+}
+.menu-nav .login-menu:hover {
+  background-color: rgb(255, 241, 241);
+}
+.close-menu {
+  position: absolute;
+  right: -35px;
+  top: 2px;
+  transition: 0.3s;
+}
+.close-menu:hover {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+/* Carrinho */
+
+.carrinho {
+  max-width: max-content;
+  background-color: white;
+  min-height: 75vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
+  z-index: 99;
+}
+.carrinho-nav h3 {
+  color: white;
+  background-color: var(--first-red);
+  font-size: 1.8rem;
+  padding: 5px 80px;
+  border-radius: 10px 10px 0 0;
+}
+.finalizar-compra {
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border: 2px solid var(--first-red);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  left: 5px;
+  background-color: var(--first-red);
+}
+.close-carrinho {
+  position: absolute;
+  left: -35px;
+  top: 8px;
+  transition: 0.3s;
+}
+.close-carrinho:hover {
+  transform: rotate(180deg);
+  transition: 0.3s;
 }
