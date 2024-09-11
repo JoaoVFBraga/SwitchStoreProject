@@ -46,3 +46,29 @@ function acionaMenuECarrinho(){
   })
 };
 acionaMenuECarrinho();
+
+// Preenchimento da página de detalhes do produto
+
+const cardsProdutos = document.querySelectorAll('.link-detalhes');
+cardsProdutos.forEach((produto) => {
+  produto.addEventListener('click', (e) => {
+    const nome = produto.querySelector('.produto-nome').innerText;
+    const valor = produto.querySelector('.produto-preco').innerText;
+    const imagem = produto.querySelector('.produto-img img').src;
+    localStorage.setItem('nomeProduto', nome);
+    localStorage.setItem('valorProduto', valor);
+    localStorage.setItem('imagemProduto', imagem);
+  })
+})
+
+const cardsConsoles = document.querySelectorAll('.console-div');
+cardsConsoles.forEach((produto) => {
+  produto.addEventListener('click', () => {
+    const nome = produto.querySelector('.console-title').innerText;
+    const valor = produto.querySelector('.console-preco').innerText;
+    const imagem = produto.querySelector('.link-console img').src;
+    localStorage.setItem('nomeProduto', nome);
+    localStorage.setItem('valorProduto', valor);
+    localStorage.setItem('imagemProduto', imagem);
+  })
+})

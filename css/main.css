@@ -94,12 +94,17 @@ h1{
 
 /* Produtos */
 
+.link-detalhes {
+  font-family: 'SUSE';
+  color: black;
+}
 .produto{
   width: 250px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 15px rgb(173, 173, 173);
   padding: 5px;
+  cursor: pointer;
 }
 .produto-img{
   width: 250px;

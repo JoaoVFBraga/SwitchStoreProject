@@ -1,0 +1,132 @@
+.detalhes-container {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.315);
+  margin: 0 10px;
+  max-width: 1440px;
+}
+.detalhes-left {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.imagem-detalhes {
+  max-height: 450px;
+  width: 100%;
+}
+.datalhes-imagem-container {
+  display: flex;
+  justify-content: center;
+}
+.detalhes-right {
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.nome-detalhes {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.estoque-garantia {
+  color: white;
+  display: flex;
+  gap: 10px;
+}
+.estoque-garantia span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.8rem;
+}
+.background-red {
+  background-color: var(--first-red);
+  padding: 25px 15px;
+  border-radius: 0 10px 0 0;
+  width: 500px;
+}
+.detalhes-avaliacao {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+}
+.detalhes-avaliacao span {
+  color: var(--first-red);
+  font-weight: 600;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+.detalhes-valores {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.pix-div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.detalhes-pix {
+  font-size: 1.8rem;
+  color: var(--first-red);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.desconto-pix {
+  color: var(--first-red);
+  font-size: 0.9rem;
+}
+.detalhes-cartao {
+  color: var(--first-red);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.divisao-preco-dividido {
+  display: flex;
+  flex-direction: column;
+}
+.preco-dividido-cartao {
+  font-weight: 600;
+}
+.detalhes-comprar{
+  color: white;
+  background-color: var(--first-red);
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--first-red);
+  width: 300px;
+  text-align: center;
+  align-self: center;
+}
+.detalhes-comprar:hover{
+  background-color: rgb(252, 71, 71);
+  border: 2px solid rgb(252, 71, 71);
+  transition: 0.3s;
+}
+.detalhes-adicionar {
+  color: var(--first-red);
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--first-red);
+  width: 300px;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.detalhes-adicionar:hover{
+  background-color: rgb(250, 236, 236);
+  transition: 0.3s;
+}
