@@ -20,15 +20,18 @@ function exibeLoginECadastro(){
 
 // Exibe mensagem de erro
 
-const botaoLogin = document.querySelectorAll('.inButton');
-botaoLogin.forEach((botao) => {
-  botao.addEventListener('click', (e) => {
-    e.preventDefault();
-    const aviso = document.querySelector('.aviso');
-    aviso.classList.remove('disable');
-    const body = document.querySelector('body');
-    body.classList.add('dark-body');
+function exibeErro(){
+  const botaoLogin = document.querySelectorAll('.inButton');
+  botaoLogin.forEach((botao) => {
+    botao.addEventListener('click', (e) => {
+      e.preventDefault();
+      const aviso = document.querySelector('.aviso');
+      aviso.classList.remove('disable');
+      const body = document.querySelector('body');
+      body.classList.add('dark-body');
+    })
   })
-})
+}
 
+exibeErro();
 exibeLoginECadastro();

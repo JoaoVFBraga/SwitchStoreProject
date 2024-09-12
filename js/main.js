@@ -49,26 +49,124 @@ acionaMenuECarrinho();
 
 // Preenchimento da página de detalhes do produto
 
-const cardsProdutos = document.querySelectorAll('.link-detalhes');
-cardsProdutos.forEach((produto) => {
-  produto.addEventListener('click', (e) => {
-    const nome = produto.querySelector('.produto-nome').innerText;
-    const valor = produto.querySelector('.produto-preco').innerText;
-    const imagem = produto.querySelector('.produto-img img').src;
-    localStorage.setItem('nomeProduto', nome);
-    localStorage.setItem('valorProduto', valor);
-    localStorage.setItem('imagemProduto', imagem);
+function abrePaginaDetalhes(){
+  const cardsProdutos = document.querySelectorAll('.link-detalhes');
+  cardsProdutos.forEach((produto) => {
+    produto.addEventListener('click', (e) => {
+      const nome = produto.querySelector('.produto-nome').innerText;
+      const valor = produto.querySelector('.produto-preco').innerText;
+      const imagem = produto.querySelector('.produto-img img').src;
+      localStorage.setItem('nomeProduto', nome);
+      localStorage.setItem('valorProduto', valor);
+      localStorage.setItem('imagemProduto', imagem);
+    })
   })
+  
+  const cardsConsoles = document.querySelectorAll('.console-div');
+  cardsConsoles.forEach((produto) => {
+    produto.addEventListener('click', () => {
+      const nome = produto.querySelector('.console-title').innerText;
+      const valor = produto.querySelector('.console-preco').innerText;
+      const imagem = produto.querySelector('.link-console img').src;
+      localStorage.setItem('nomeProduto', nome);
+      localStorage.setItem('valorProduto', valor);
+      localStorage.setItem('imagemProduto', imagem);
+    })
+  })
+}
+
+abrePaginaDetalhes();
+
+const listaDeProdutos = [
+  {id: 'con01', nome: 'Nintendo Switch Lite', valor: 1399.90, imagem: "img/produtos/lite1.jpg"},
+  {id: 'con02', nome: 'Nintendo Switch V2', valor: 1999.90, imagem: "img/produtos/switch1.jpg"},
+  {id: 'con03', nome: 'Nintendo Switch Oled', valor: 2199.90, imagem: "img/produtos/oled3.jpg"},
+  {id: 'jog01', nome: 'Super Mario Bros. Wonder', valor: 299.90, imagem: "img/produtos/smwonder.jpg"},
+  {id: 'jog02', nome: 'Pokémon Legends Arceus', valor: 349.90, imagem: "img/produtos/pokemon.jpg"},
+  {id: 'jog03', nome: 'Super Mario Bros. Deluxe', valor: 299.90, imagem: "img/produtos/smdeluxe.jpg"},
+  {id: 'jog04', nome: 'Kirby and the Forgotten Land', valor: 299.90, imagem: "img/produtos/kirby.jpg"},
+  {id: 'jog05', nome: 'Zelda: Tears of the Kingdom', valor: 299.90, imagem: "img/produtos/zelda.jpg"},
+  {id: 'ace01', nome: 'Controle JoyCon', valor: 349.90, imagem: "img/produtos/joycon.jpg"},
+  {id: 'ace02', nome: 'Switch Pro Controller', valor: 349.90, imagem: "img/produtos/procontroller.jpg"},
+  {id: 'ace03', nome: 'Memory Card Nintendo 256Gb', valor: 249.90, imagem: "img/produtos/memorycard.jpg"},
+  {id: 'ace04', nome: 'Bolsa Pokébola para Switch', valor: 149.90, imagem: "img/produtos/bolsa.jpg"},
+  {id: 'ace05', nome: 'Película para Nintendo Switch', valor: 49.90, imagem: "img/produtos/pelicula.jpg"}
+];
+
+const input = document.querySelector('.pesquisar-input');
+input.addEventListener('focus', () => {
+  const body = document.querySelector('body');
+  body.classList.add('dark-body');
+  const divForm = document.querySelector('.div-form');
+  divForm.classList.add('index99');
+});
+
+let resultadoDosProdutos = [];
+
+input.addEventListener('input', () => {
+  const exibePesquisa = document.querySelector('.exibe-pesquisa');
+  exibePesquisa.classList.remove('disable');
+  exibePesquisa.innerHTML = '';
+  const itemPesquisado = input.value.toLowerCase();
+  resultadoDosProdutos = listaDeProdutos.filter((produto) => {
+    return produto.nome.toLowerCase().includes(itemPesquisado);
+  })
+  if (input.value === ''){
+    exibePesquisa.classList.add('disable');
+  } else if (resultadoDosProdutos.length === 0){
+    const criaP = document.createElement('p');
+    criaP.classList.add('mensagem-sem-produto')
+    const pCriado = document.createTextNode('Não foi possível encontrar o produto');
+    criaP.appendChild(pCriado);
+    exibePesquisa.appendChild(criaP);
+  } else {
+    resultadoDosProdutos.forEach((produto) => {
+      const nome = produto.nome;
+      const valor = produto.valor;
+      const imagem = produto.imagem;
+      const criaA = document.createElement('a');
+      criaA.classList.add('pesquisa-container');
+      criaA.href = "produto.html"
+      const criaImgDiv = document.createElement('div');
+      criaImgDiv.classList.add('imagem-pesquisa');
+      const criaImg = document.createElement('img');
+      criaImg.src = imagem;
+      criaImgDiv.appendChild(criaImg);
+      criaA.appendChild(criaImgDiv);
+      const criaInformacoes = document.createElement('div');
+      criaInformacoes.classList.add('informacoes-pesquisa');
+      const criaNome = document.createElement('h4');
+      criaNome.classList.add('nome-pesquisa');
+      const nomeCriado = document.createTextNode(nome);
+      criaNome.appendChild(nomeCriado);
+      criaInformacoes.appendChild(criaNome);
+      const criaValor = document.createElement('span');
+      criaValor.classList.add('valor-pesquisa');
+      const valorCriado = document.createTextNode(`R$ ${valor.toFixed(2)}`);
+      criaValor.appendChild(valorCriado);
+      criaInformacoes.appendChild(criaValor);
+      criaA.appendChild(criaInformacoes);
+
+      criaA.addEventListener('click', () => {
+        localStorage.setItem('nomeProduto', nome);
+        localStorage.setItem('valorProduto', `R$ ${valor.toFixed(2)}`);
+        localStorage.setItem('imagemProduto', imagem);
+      });
+
+      exibePesquisa.appendChild(criaA);
+    })
+  }
+  })
+
+input.addEventListener('blur', () => {
+  setTimeout(() => {
+    const body = document.querySelector('body');
+    body.classList.remove('dark-body');
+    const divForm = document.querySelector('.div-form');
+    divForm.classList.remove('index99');
+    const exibePesquisa = document.querySelector('.exibe-pesquisa');
+    exibePesquisa.classList.add('disable');
+  }, 100)
 })
 
-const cardsConsoles = document.querySelectorAll('.console-div');
-cardsConsoles.forEach((produto) => {
-  produto.addEventListener('click', () => {
-    const nome = produto.querySelector('.console-title').innerText;
-    const valor = produto.querySelector('.console-preco').innerText;
-    const imagem = produto.querySelector('.link-console img').src;
-    localStorage.setItem('nomeProduto', nome);
-    localStorage.setItem('valorProduto', valor);
-    localStorage.setItem('imagemProduto', imagem);
-  })
-})
+

@@ -37,8 +37,56 @@ h1{
   font-size: 1.1rem;
   width: 100%;
 }
+.index99 {
+  z-index: 99;
+}
 .div-form{
   flex-grow: 1;
+  position: relative;
+}
+.exibe-pesquisa {
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  left: 0;
+  border-radius: 5px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.exibe-pesquisa a {
+  color: black;
+}
+.exibe-pesquisa a:hover {
+  background-color: rgba(0, 0, 0, 0.048);
+}
+.pesquisa-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 0 10px;
+}
+.imagem-pesquisa{
+  transition: 0.3s;
+}
+.pesquisa-container:not(:last-child){
+  border-bottom: 1px solid var(--smooth-black);
+}
+.imagem-pesquisa{
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagem-pesquisa img {
+  max-width: 100%;
+  max-height: 65px;
+}
+.mensagem-sem-produto {
+  color: var(--smooth-black);
+  text-align: center;
+  margin: 10px 0;
 }
 .options{
   display: flex;
