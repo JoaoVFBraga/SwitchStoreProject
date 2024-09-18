@@ -1,9 +1,8 @@
-@import url('main.css');
-@import url('login.css');
-@import url('produto.css');
+@import url("main.css");
+@import url("login.css");
+@import url("produto.css");
 
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
 
 :root {
   --first-red: rgb(235, 3, 21);
@@ -25,7 +24,7 @@ html {
 }
 body {
   background-color: rgb(240, 240, 240);
-  font-family: 'SUSE', sans-serif;
+  font-family: "SUSE", sans-serif;
   box-sizing: border-box;
   height: 100%;
 }
@@ -33,7 +32,7 @@ body {
 /* Body */
 
 .dark-body::after {
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.603);
@@ -44,4 +43,18 @@ body {
 
 .disable {
   display: none;
+}
+
+.disable-carrinho {
+  visibility: hidden;
+  transform: translateX(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.disable-menu {
+  visibility: hidden;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: 0.5s;
 }

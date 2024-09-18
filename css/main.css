@@ -302,12 +302,6 @@ h1 {
   transition: 0.3s;
 }
 
-@media (max-width: 1050px) {
-  .consoles-container {
-    flex-direction: column;
-  }
-}
-
 /* Banner */
 
 .second-banner {
@@ -340,12 +334,15 @@ footer a {
 
 .menu {
   background-color: white;
-  min-height: 100vh;
+  height: 75vh;
   position: absolute;
   top: 0;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
   z-index: 99;
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 0.5s;
 }
 .menu-nav {
   display: flex;
@@ -392,6 +389,7 @@ footer a {
   right: 2px;
   left: 2px;
   background-color: var(--first-red);
+  margin: 0 3px;
 }
 .menu-nav .login-menu:hover {
   background-color: rgb(255, 59, 59);
@@ -400,9 +398,10 @@ footer a {
 }
 .close-menu {
   position: absolute;
-  right: -35px;
+  right: -40px;
   top: 2px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .close-menu:hover {
   transform: rotate(180deg);
@@ -414,13 +413,16 @@ footer a {
 .carrinho {
   max-width: max-content;
   background-color: white;
-  min-height: 75vh;
+  height: 75vh;
   position: fixed;
   top: 0;
   right: 0;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
   z-index: 99;
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 0.5s;
 }
 .carrinho-nav h3 {
   color: white;
@@ -459,9 +461,10 @@ footer a {
 }
 .close-carrinho {
   position: absolute;
-  left: -35px;
+  left: -40px;
   top: 8px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .close-carrinho:hover {
   transform: rotate(180deg);
@@ -510,4 +513,181 @@ footer a {
   color: rgb(253, 124, 124);
   border-bottom: 1px solid rgb(253, 124, 124);
   transition: 0.3s;
+}
+.carrinho-ul {
+  overflow-y: auto;
+  max-height: 62vh;
+}
+
+.carrinho-ul::-webkit-scrollbar {
+  width: 12px;
+}
+
+.carrinho-ul::-webkit-scrollbar-track {
+  background: white;
+}
+
+.carrinho-ul::-webkit-scrollbar-thumb {
+  background-color: var(--first-red);
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+/* Responsividade */
+
+@media (max-width: 1400px) {
+  .consoles-container {
+    flex-direction: column;
+  }
+  .left-consoles {
+    margin: 0 auto;
+  }
+  .left-consoles img {
+    display: none;
+  }
+  .console-div {
+    max-width: 850px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 1400px) {
+  .consoles-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .left-consoles {
+    margin: 0 auto;
+  }
+  .left-consoles img {
+    display: none;
+  }
+  .console-div {
+    max-width: 850px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 770px) {
+  .login-icon span {
+    display: none;
+  }
+  .title2 {
+    text-align: center;
+  }
+  .title2 h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 665px) {
+  .console-adicionar {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .console-comprar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  #logo h1 {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    text-align: center;
+  }
+  .title2 h2 {
+    font-size: 1.6rem;
+  }
+  .title2 img {
+    max-width: 70px;
+  }
+  .produto {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .produto-img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .console-div {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  .console-title {
+    font-size: 1.6rem;
+  }
+  .console-preco {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .console-btns {
+    align-self: center;
+  }
+  .btn-produto {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 460px) {
+  .produto {
+    width: 150px;
+  }
+  .produto-img {
+    width: 150px;
+    height: 100px;
+  }
+  .btn-adicionar {
+    font-size: 0.8rem;
+  }
+  .btn-comprar {
+    font-size: 0.8rem;
+  }
+  .login-icon {
+    display: none;
+  }
+  .title2 h2 {
+    font-size: 1.4rem;
+  }
+  .title2 img {
+    max-width: 60px;
+  }
+  .console-title {
+    font-size: 1.4rem;
+  }
+  .console-preco {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .console-description {
+    font-size: 0.9rem;
+  }
+  .console-adicionar {
+    font-size: 1rem;
+  }
+  .console-comprar {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .menu-icon img {
+    width: 25px;
+  }
+  .cart img {
+    width: 25px;
+  }
+  .first-header-container {
+    gap: 3px;
+  }
+  .console-div img {
+    max-width: 280px;
+  }
 }

@@ -98,7 +98,7 @@
 .preco-dividido-cartao {
   font-weight: 600;
 }
-.detalhes-comprar{
+.detalhes-comprar {
   color: white;
   background-color: var(--first-red);
   font-size: 1.5rem;
@@ -109,7 +109,7 @@
   text-align: center;
   align-self: center;
 }
-.detalhes-comprar:hover{
+.detalhes-comprar:hover {
   background-color: rgb(252, 71, 71);
   border: 2px solid rgb(252, 71, 71);
   transition: 0.3s;
@@ -126,7 +126,74 @@
   align-self: center;
   margin-bottom: 10px;
 }
-.detalhes-adicionar:hover{
+.detalhes-adicionar:hover {
   background-color: rgb(250, 236, 236);
   transition: 0.3s;
+}
+
+@media (max-width: 1050px) {
+  .detalhes-container {
+    grid-template-columns: 1fr;
+    margin: 10px;
+  }
+  .imagem-detalhes {
+    max-height: 400px;
+    width: 100%;
+  }
+  .detalhes-left {
+    padding: 10px;
+  }
+  .background-red {
+    box-sizing: border-box;
+    padding: 25px 10px;
+    border-radius: 0 0 0 0;
+    width: 100%;
+  }
+  .detalhes-avaliacao {
+    padding-left: 15px;
+  }
+  .detalhes-valores {
+    padding-left: 15px;
+    margin: 30px 0;
+  }
+  .detalhes-right {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .imagem-detalhes {
+    max-height: 350px;
+  }
+  .detalhes-left {
+    height: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .imagem-detalhes {
+    max-height: 350px;
+  }
+  .detalhes-left {
+    height: 400px;
+  }
+  .detalhes-adicionar {
+    font-size: 1.3rem;
+    margin: 5px;
+  }
+  .detalhes-comprar {
+    font-size: 1.3rem;
+  }
+  .detalhes-pix {
+    font-size: 1.5rem;
+  }
+  .desconto-pix {
+    font-size: 0.8rem;
+  }
+  .pix-div img {
+    max-width: 30px;
+  }
+  .detalhes-cartao img {
+    max-width: 30px;
+  }
 }

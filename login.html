@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Switch Store - Login</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/login.js" defer></script>
-</head>
-<body>
-  <header class="login-header">
-    <div class="login-header-container">
-      <a href="index.html"><h1>Switch Store</h1></a>
-      <a href="index.html" class="link-login-header"><img src="img/icons/icons8-back-50.png" width="30px" alt=""> Voltar ao Início</a>
-    </div>
-  </header>
-  <main>
-    <section class="login-container">
-      <div class="left-login">
-        <h2>Conecte-se com a gente</h2>
-        <div>
-          <img src="img/toadete.png" width="300px" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Store - Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/login.js" defer></script>
+  </head>
+  <body>
+    <header class="login-header">
+      <div class="login-header-container">
+        <a href="index.html"><h1>Switch Store</h1></a>
+        <a href="index.html" class="link-login-header"
+          ><img src="img/icons/icons8-back-50.png" width="30px" alt="" /> Voltar
+          ao Início</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="login-container">
+        <div class="left-login">
+          <h2>Conecte-se com a gente</h2>
+          <div>
+            <img src="img/toadete.png" width="300px" alt="" />
+          </div>
         </div>
-      </div>
-      <div class="right-login">
-        <h3>Faça seu Login</h3>
-        <form action="#">
-          <label for="user">Usuário</label>
-          <input type="text" name="user">
-          <label for="password">Senha</label>
-          <input type="password" name="password">
-          <input class="inButton" type="submit" value="Entrar">
-        </form>
-        <p class="criar-conta">Não possui conta? <span id="btn-cadastrar">Cadastre-se aqui</span></p>
-      </div>
-      <div class="right-login cadastro disable">
-        <h3>Faça seu Cadastro</h3>
+        <div class="right-login">
+          <h3>Faça seu Login</h3>
           <form action="#">
             <label for="user">Usuário</label>
-              <input type="text" name="user">
-              <label for="email">E-mail</label>
-              <input type="text" name="email">
-              <label for="password">Senha</label>
-              <input type="password" name="password">
-              <input class="inButton" type="submit" value="Criar Conta">
+            <input type="text" name="user" />
+            <label for="password">Senha</label>
+            <input type="password" name="password" />
+            <input class="inButton" type="submit" value="Entrar" />
           </form>
-          <p class="criar-conta">Já possui conta? <span id="btn-login">Acesse aqui</span></p>
+          <p class="criar-conta">
+            Não possui conta? <span id="btn-cadastrar">Cadastre-se aqui</span>
+          </p>
+        </div>
+        <div class="right-login cadastro disable">
+          <h3>Faça seu Cadastro</h3>
+          <form action="#">
+            <label for="user">Usuário</label>
+            <input type="text" name="user" />
+            <label for="email">E-mail</label>
+            <input type="text" name="email" />
+            <label for="password">Senha</label>
+            <input type="password" name="password" />
+            <input class="inButton" type="submit" value="Criar Conta" />
+          </form>
+          <p class="criar-conta">
+            Já possui conta? <span id="btn-login">Acesse aqui</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <section class="aviso disable">
+      <div class="img-aviso">
+        <img src="img/mario.png" alt="Super Mario Pensando" width="250px" />
+      </div>
+      <div class="aviso-texto">
+        <h3>Ops...</h3>
+        <p>
+          Parece que algo deu errado com nosso sistema de login e cadastro. Por
+          favor, tente novamente mais tarde.
+        </p>
+        <a href="index.html">Voltar ao Início</a>
       </div>
     </section>
-  </main>
-  <section class="aviso disable">
-    <div>
-      <img src="img/mario.png" alt="Super Mario Pensando" width="250px">
-    </div>
-    <div class="aviso-texto">
-      <h3>Ops...</h3>
-      <p>Parece que algo deu errado com nosso sistema de login e cadastro. Por favor, tente novamente mais tarde.</p>
-      <a href="index.html">Voltar ao Início</a>
-    </div>
-  </section>
-</body>
+  </body>
 </html>
-

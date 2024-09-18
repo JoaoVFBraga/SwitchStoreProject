@@ -7,14 +7,14 @@ function acionaCarrinho() {
     const body = document.querySelector("body");
     body.classList.add("dark-body");
     const carrinho = document.querySelector(".carrinho");
-    carrinho.classList.remove("disable");
+    carrinho.classList.remove("disable-carrinho");
   });
 
   closeCarrinho.addEventListener("click", () => {
     const body = document.querySelector("body");
     body.classList.remove("dark-body");
     const carrinho = document.querySelector(".carrinho");
-    carrinho.classList.add("disable");
+    carrinho.classList.add("disable-carrinho");
   });
 }
 acionaCarrinho();
@@ -23,7 +23,7 @@ function chamaCarrinho() {
   const body = document.querySelector("body");
   body.classList.add("dark-body");
   const carrinho = document.querySelector(".carrinho");
-  carrinho.classList.remove("disable");
+  carrinho.classList.remove("disable-carrinho");
 }
 
 function acionaMenu() {
@@ -35,15 +35,14 @@ function acionaMenu() {
     const body = document.querySelector("body");
     body.classList.add("dark-body");
     const menu = document.querySelector(".menu");
-    menu.classList.remove("disable");
-    menu.classList.add("show");
+    menu.classList.remove("disable-menu");
   });
 
   closeMenu.addEventListener("click", () => {
     const body = document.querySelector("body");
     body.classList.remove("dark-body");
     const menu = document.querySelector(".menu");
-    menu.classList.add("disable");
+    menu.classList.add("disable-menu");
   });
 
   itensMenu.forEach((item) => {
@@ -51,7 +50,7 @@ function acionaMenu() {
       const body = document.querySelector("body");
       body.classList.remove("dark-body");
       const menu = document.querySelector(".menu");
-      menu.classList.add("disable");
+      menu.classList.add("disable-menu");
     });
   });
 }
