@@ -18,3 +18,18 @@ function alteraHTMLProdutos() {
 }
 
 alteraHTMLProdutos();
+
+function detalheClicado() {
+  const botaoAdicionar = document.querySelector(".detalhes-adicionar");
+  botaoAdicionar.addEventListener("click", () => {
+    chamaCarrinho();
+    const nome = document.querySelector(".nome-detalhes").innerText;
+    console.log(nome);
+    const produtoClicado = listaDeProdutos.find((produto) => {
+      return produto.nome.toLowerCase() === nome.toLowerCase();
+    });
+    adicionaAoCarrinho(produtoClicado);
+  });
+}
+
+detalheClicado();
